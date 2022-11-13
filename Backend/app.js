@@ -50,7 +50,7 @@ app.use((error, req, res, next) => {
     res.status(status).json({ message: message, data: data });
 });
 
-mongoose.connect('mongodb+srv://divyansh:divyansh123@cluster0.ovhcg1f.mongodb.net/Savings?retryWrites=true&w=majority')
+mongoose.connect(MongoURI)
     .then(result => {
         app.listen(8080);
     })
